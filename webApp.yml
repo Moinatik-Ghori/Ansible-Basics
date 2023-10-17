@@ -18,3 +18,7 @@
       service:
         name: nginx
         state: started
+    - name: Install My-SQL
+      yum:
+        name: mysql-server
+        state: present
