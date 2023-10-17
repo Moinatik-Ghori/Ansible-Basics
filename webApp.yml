@@ -18,7 +18,12 @@
       service:
         name: nginx
         state: started
-    - name: Install My-SQL
+
+    - name: Install My-SQL Package
+      yum:
+        name: /opt/mysql/mysql-community-release-el7-5.noarch.rpm
+        state: present
+    - name: Install MYSQL
       yum:
         name: mysql-server
         state: present
