@@ -19,6 +19,11 @@
         name: nginx
         state: started
 
+    - name: Download sources for My-SQL Dependency
+      get_url:
+        url: http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+        dest: /opt/mysql
+
     - name: Install My-SQL Package
       yum:
         name: /opt/mysql/mysql-community-release-el7-5.noarch.rpm
